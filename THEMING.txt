@@ -1,0 +1,48 @@
+# Profile base themes
+adaptivetheme/
+bootstrap/
+omega/
+radix/
+zen/
+
+# Other base themes
+aurora/
+bassline/
+boilerplate/
+gesso/
+groundwork/
+kalatheme/
+om/
+sasson/
+
+# Standalone
+bootstrap_clean_blog/
+boron/
+business_responsive_theme/
+da_vinci/
+simpleclean/
+titon/
+zeropoint/
+
+# Subthemes
+adaptive_cat/
+aurora_cat/
+bassline_cat/
+boiler-cat/
+boot_cat/
+gesso_cat/
+ground-cat/
+kala_cat/
+om_cat/
+omega_cat/
+omega_ohm/
+radix_default/
+radix_simplex/
+radix_spacelab/
+sassoncat/
+zen_cat/
+
+# Frameworks
+html5-boilerplate/
+html5_simplified/
+toolkit/
