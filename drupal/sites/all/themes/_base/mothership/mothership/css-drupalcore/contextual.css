@@ -1,0 +1,78 @@
+/**
+ * @file
+ * Stylesheet for the Contextual module.
+ * Loads of !important here :/
+ * so we dont inherit styles from the site - its not pretty but it works
+  */
+
+/*  Region */
+.contextual-links-region {
+  position: relative;
+}
+
+
+/* wrapper */
+div.contextual-links-wrapper {
+  position: absolute;
+  top: 2px;
+  right: 5px; /* LTR */
+  z-index: 999;
+  display: none;
+}
+
+html.js div.contextual-links-wrapper {
+  display: block;
+}
+
+
+/* Trigger icon */
+a.contextual-links-trigger {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 100;
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  outline: none;
+}
+
+
+/* Contextual links */
+div ul.contextual-links {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  display: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+div.contextual-links-region:hover a.contextual-links-trigger,
+div.contextual-links-active a.contextual-links-trigger,
+div.contextual-links-active ul.contextual-links,
+div.contextual-links-wrapper ul.contextual-links li {
+  display: block !important;
+  float: none !important;
+}
+
+div ul.contextual-links li {
+  margin: 0 !important;
+  list-style: none !important;
+  list-style-image: none !important;
+  text-align: left !important;
+}
+
+ul.contextual-links li a {
+  display: block !important;
+  padding: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Theme */

@@ -1,0 +1,21 @@
+name = Bassline
+description = Drupal base frontend framework. Unclutter the markup.
+core = 7.x
+
+; Styles
+stylesheets[screen][] = css/reset.css
+
+; Regions
+regions[content] = Content
+regions[help] = Help
+
+; Settings
+settings[bassline_breadcrumb] = 1
+settings[bassline_breadcrumb_title] = 1
+
+; Information added by Drupal.org packaging script on 2015-01-21
+version = "7.x-1.3+1-dev"
+core = "7.x"
+project = "bassline"
+datestamp = "1421836382"
+

@@ -1,0 +1,215 @@
+/* Mothership Default Drupal Styles */
+a {
+  outline: none;
+}
+
+a img {
+  border: none;
+}
+
+a, a:link, a:visited, a:active {
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+:focus {
+  outline: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+.active, .active-trail {
+  font-weight: bold;
+}
+
+ul li {
+  list-style: none;
+}
+
+/* clearfix */
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+
+/* Default list for body content */
+.field-name-body ol, .field-name-body ul {
+  margin: 0 0 0 10px;
+}
+
+.field-name-body ul li {
+  list-style: square inside;
+}
+
+
+/* Tabs */
+.tabs li {
+  display: inline;
+  padding: 0 10px;
+}
+
+.primary {
+  padding: 3px 0;
+  margin: 4px 0;
+}
+
+.primary li {
+}
+
+.secondary li {
+}
+
+
+/* Pager */
+.pager li {
+  display: inline-block;
+}
+
+
+/* Breadcrumb */
+.breadcrumb {
+  margin: 0;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  margin: 0 0 0 10px;
+}
+
+
+/* Forms */
+.form-type-textfield {
+}
+
+.form-type-checkbox {
+  margin: 0;
+}
+
+.form-type-radio {
+  margin: 0;
+}
+
+.form-type-textarea {
+  margin: 0;
+}
+
+.form-type-managed-file {
+  margin: 0;
+}
+
+fieldset {
+}
+
+label {
+  display: inline;
+  font-weight: bold;
+}
+
+textarea {
+}
+
+input {
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+input[type="file"] {
+  vertical-align: middle;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+form small, form .description {
+  display: block;
+  text-align: left;
+}
+
+.form-field-required {
+}
+
+.form-field-required:after {
+  content: " * "
+}
+
+
+/* Fieldsets and Legend */
+fieldset legend {
+. ie7 margin-left : - 7 px;
+  width: 100%;
+}
+
+
+/**
+ * Block clearfix
+ * yup its a recap of the clearfix trick,
+ * no reason to do class="clearfix/cf/whatever" all over our markup
+ */
+.block .content:before, .block .content:after {
+  content: "";
+  display: table;
+}
+
+.block .content:after {
+  clear: both;
+}
+
+.block .content {
+  zoom: 1;
+}
+
+
+/* Admin toolbar fix if its used with the toolbar */
+body.toolbar div#admin-toolbar.vertical {
+  top: 130px;
+}
+
+body.toolbar-drawer div#admin-toolbar.vertical {
+  top: 66px;
+}
+
+#admin-toolbar {
+  top: 20px !important;
+}
+
+
+/* Admin styles for blocks */
+.page-admin-structure-block-demo .block-region {
+  background: #ffff66;
+  border: 1px dotted #9f9e00;
+  color: #000;
+  font: 90% "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  text-shadow: none;
+}
