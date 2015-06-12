@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="lt-ie9 lt-ie8 lt-ie7" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 7]><html class="lt-ie9 lt-ie8" lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" lang="en" dir="ltr"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+<head>
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="http://mybfbase.loc/sites/all/themes/adaptive_cat/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<title>Homepage Demo | BF Base</title>
+<style>
+@import url("http://mybfbase.loc/modules/system/system.base.css?npbij0");
+@import url("http://mybfbase.loc/modules/system/system.menus.css?npbij0");
+@import url("http://mybfbase.loc/modules/system/system.messages.css?npbij0");
+@import url("http://mybfbase.loc/modules/system/system.theme.css?npbij0");
+</style>
+<style>
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_core/css/panopoly-jquery-ui-theme.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.accordion.min.css?npbij0");
+</style>
+<style>
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/date/date_api/date.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/date/date_popup/themes/datepicker.1.7.css?npbij0");
+@import url("http://mybfbase.loc/modules/field/theme/field.css?npbij0");
+@import url("http://mybfbase.loc/modules/node/node.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_admin/panopoly-admin.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_admin/panopoly-admin-navbar.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_core/css/panopoly-dropbutton.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/_panopoly_demo/panopoly_demo/panopoly_demo.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_magic/css/panopoly-magic.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_magic/css/panopoly-modal.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_theme/css/panopoly-featured.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_theme/css/panopoly-accordian.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_theme/css/panopoly-layouts.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_widgets/panopoly-widgets.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_wysiwyg/panopoly-wysiwyg.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/radix_layouts/radix_layouts.css?npbij0");
+@import url("http://mybfbase.loc/modules/search/search.css?npbij0");
+@import url("http://mybfbase.loc/modules/user/user.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/views/css/views.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/caption_filter/caption-filter.css?npbij0");
+</style>
+<style>
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/ctools/css/ctools.css?npbij0");
+@import url("http://mybfbase.loc/profiles/bf_base/modules/contrib/panels/css/panels.css?npbij0");
+</style>
+<style media="screen">
+@import url("http://mybfbase.loc/profiles/bf_base/themes/_base/adaptivetheme/at_core/css/at.layout.css?npbij0");
+@import url("http://mybfbase.loc/sites/all/themes/adaptive_cat/css/global.base.css?npbij0");
+@import url("http://mybfbase.loc/sites/all/themes/adaptive_cat/css/global.styles.css?npbij0");
+</style>
+<style>
+@import url("http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_images/panopoly-images.css?npbij0");
+</style>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/jquery/1.7/jquery.min.js?v=1.7.1"></script>
+<script src="http://mybfbase.loc/misc/jquery.once.js?v=1.2"></script>
+<script src="http://mybfbase.loc/misc/drupal.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.tabs.min.js?v=1.10.2"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.accordion.min.js?v=1.10.2"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_images/panopoly-images.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_admin/panopoly-admin.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_magic/panopoly-magic.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_theme/js/panopoly-accordion.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/contrib/caption_filter/js/caption-filter.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/libraries/jquery.imagesloaded/jquery.imagesloaded.js?npbij0"></script>
+<script src="http://mybfbase.loc/misc/autocomplete.js?v=7.36"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"adaptive_cat","theme_token":"9OZN75Cko2e-FK3WL-UAvgw1XMRrJn408qv4AwAtzrA","js":{"profiles\/bf_base\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.js":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_widgets\/jquery-ui-tabs-rotate.js":1,"profiles\/bf_base\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"profiles\/bf_base\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"profiles\/bf_base\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"profiles\/bf_base\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.tabs.min.js":1,"profiles\/bf_base\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.accordion.min.js":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_images\/panopoly-images.js":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_admin\/panopoly-admin.js":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_magic\/panopoly-magic.js":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_theme\/js\/panopoly-accordion.js":1,"profiles\/bf_base\/modules\/contrib\/caption_filter\/js\/caption-filter.js":1,"profiles\/bf_base\/libraries\/jquery.imagesloaded\/jquery.imagesloaded.js":1,"misc\/autocomplete.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"profiles\/bf_base\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/bf_base\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_admin\/panopoly-admin.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_admin\/panopoly-admin-navbar.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_core\/css\/panopoly-dropbutton.css":1,"profiles\/bf_base\/modules\/contrib\/_panopoly_demo\/panopoly_demo\/panopoly_demo.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_magic\/css\/panopoly-magic.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_magic\/css\/panopoly-modal.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_theme\/css\/panopoly-featured.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_theme\/css\/panopoly-accordian.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_theme\/css\/panopoly-layouts.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_widgets\/panopoly-widgets.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_wysiwyg\/panopoly-wysiwyg.css":1,"profiles\/bf_base\/modules\/contrib\/radix_layouts\/radix_layouts.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/bf_base\/modules\/contrib\/views\/css\/views.css":1,"profiles\/bf_base\/modules\/contrib\/caption_filter\/caption-filter.css":1,"profiles\/bf_base\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/bf_base\/modules\/contrib\/panels\/css\/panels.css":1,"profiles\/bf_base\/themes\/_base\/adaptivetheme\/at_core\/css\/at.layout.css":1,"sites\/all\/themes\/adaptive_cat\/css\/global.base.css":1,"sites\/all\/themes\/adaptive_cat\/css\/global.styles.css":1,"profiles\/bf_base\/modules\/panopoly\/panopoly_images\/panopoly-images.css":1}},"CToolsModal":{"modalSize":{"type":"scale","width":".9","height":".9","addWidth":0,"addHeight":0,"contentRight":25,"contentBottom":75},"modalOptions":{"opacity":".55","background-color":"#FFF"},"animationSpeed":"fast","modalTheme":"CToolsModalDialog","throbberTheme":"CToolsModalThrobber"},"adaptivetheme":{"adaptive_cat":{"layout_settings":{"bigscreen":"three-col-grail","tablet_landscape":"three-col-grail","tablet_portrait":"one-col-vert","smalltouch_landscape":"one-col-vert","smalltouch_portrait":"one-col-stack"},"media_query_settings":{"bigscreen":"only screen and (min-width:1025px)","tablet_landscape":"only screen and (min-width:769px) and (max-width:1024px)","tablet_portrait":"only screen and (min-width:581px) and (max-width:768px)","smalltouch_landscape":"only screen and (min-width:321px) and (max-width:580px)","smalltouch_portrait":"only screen and (max-width:320px)"}}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-demo region-content atr-7.x-3.x atv-7.x-3.2 page-panels">
+  <div id="skip-link" class="nocontent">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper">
+  <div id="page" class="container page">
+
+    <!-- !Leaderboard Region -->
+    
+    <header id="header" class="clearfix" role="banner">
+
+              <!-- !Branding -->
+        <div id="branding" class="branding-elements clearfix">
+
+          
+                      <!-- !Site name and Slogan -->
+            <div class="h-group" id="name-and-slogan">
+
+                              <h1 id="site-name"><a href="/" title="Home page">BF Base</a></h1>
+              
+              
+            </div>
+          
+        </div>
+      
+      <!-- !Header Region -->
+      
+    </header>
+
+    <!-- !Navigation -->
+        <div id="primary-menu-bar" class="nav clearfix"><nav  class="primary-menu-wrapper menu-wrapper clearfix" role="navigation" aria-labelledby="primary-menu"><h2 class="element-invisible" id="primary-menu">Main menu</h2><ul class="menu primary-menu clearfix"><li class="menu-1097 active-trail first active"><a href="/demo" class="active-trail active">Homepage Demo</a></li><li class="menu-1094"><a href="/content/content-demo">Content Demo</a></li><li class="menu-1095"><a href="/content/great-vegetables">Great Vegetables</a></li><li class="menu-1096"><a href="/content/lovely-vegetables">Lovely Vegetables</a></li><li class="menu-1098"><a href="/news">News</a></li><li class="menu-1099 last"><a href="/faq">FAQ</a></li></ul></nav></div>    <div id="secondary-menu-bar" class="nav clearfix"><nav  class="secondary-menu-wrapper menu-wrapper clearfix" role="navigation" aria-labelledby="secondary-menu"><h2 class="element-invisible" id="secondary-menu">Secondary menu</h2><ul class="menu secondary-menu clearfix"><li class="menu-247 first last"><a href="/user/login">Log in</a></li></ul></nav></div>
+    <!-- !Breadcrumbs -->
+    <div id="breadcrumb" class="clearfix"><nav class="breadcrumb-wrapper clearfix" role="navigation" aria-labelledby="breadcrumb-label"><h2 id="breadcrumb-label" class="element-invisible">You are here</h2><ol id="crumbs" class="clearfix"><li class="crumb crumb-first">Homepage Demo</li></ol></nav></div>
+    <!-- !Messages and Help -->
+        
+    <!-- !Secondary Content Region -->
+    
+    <div id="columns" class="columns clearfix">
+      <main id="content-column" class="content-column" role="main">
+        <div class="content-inner">
+
+          <!-- !Highlighted region -->
+          
+          <section id="main-content">
+
+            
+            <!-- !Main Content Header -->
+                          <header id="main-content-header" class="clearfix">
+
+                                  <h1 id="page-title">
+                    Homepage Demo                  </h1>
+                
+                
+              </header>
+            
+            <!-- !Main Content -->
+                          <div id="content" class="region">
+                <div id="block-system-main" class="block block-system no-title" >  
+  
+  
+<div class="panel-display burr-flipped clearfix radix-burr-flipped" >
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-views-panes pane-panopoly-demo-individual-demo-item no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="view view-panopoly-demo view-id-panopoly_demo view-display-id-individual_demo_item view-dom-id-9e624f4621d9e2fa204a147fe095a1f8">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last clearfix">
+    
+<div class="panelizer-view-mode node node-featured node-panopoly-page node-4 node-promoted node-promoted">
+        
+<div class="panel-display boxton clearfix radix-boxton" >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-entity-field pane-node-field-featured-image no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-field-featured-image field-type-image field-label-hidden view-mode-_custom_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/content-demo"><img class="panopoly-image-half image-style-panopoly-image-half" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_half/public/pages/bell-peppers-et-al.jpg?itok=V9bN4Xa0" /></a></figure></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-title no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <a href="/content/content-demo">Content Demo</a>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-body no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-_custom_display"><div class="field-items"><div class="field-item even"><p>Garlic radicchio chaya. Mizuna greens moth bean horseradish urad bean? Gobo new zealand spinach; aubergine manioc mustard, celtuce winter purslane corn salad celeriac garbanzo.</p></div></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+          </div>
+
+    
+    
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-views-panes pane-panopoly-demo-demo-listing no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="view view-panopoly-demo view-id-panopoly_demo view-display-id-demo_listing view-dom-id-c6a9e4e53222916034ca935ad334bce8">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first clearfix">
+    
+<div class="panelizer-view-mode node node-teaser node-panopoly-page node-2 page-teaser node-promoted node-promoted">
+        <H2 >
+              <a href="/content/vegetables-are-great">Vegetables are Great</a>
+          </H2>
+      
+<div class="panel-display boxton clearfix radix-boxton" >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-entity-field pane-node-field-featured-image no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-field-featured-image field-type-image field-label-hidden view-mode-_custom_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/vegetables-are-great"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/vegetables-are-great.jpg?itok=pHQkaOvZ" /></a></figure></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-body no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-_custom_display"><div class="field-items"><div class="field-item even"><p>Pignut; azuki bean runner bean celeriac celery celeriac. Shallot tomatillo aubergine celeriac. Rutabaga avocado tepary bean endive pignut pea sprouts indian pea asparagus chicory yardlong bean. Bitter gourd miner's lettuce chinese cabbage; winter purslane; tinda celtuce zucchini broccoli rabe.</p></div></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <ul class="links inline"><li class="node-readmore first last"><a href="/content/vegetables-are-great" rel="tag" title="Vegetables are Great">Read more<span class="element-invisible"> about Vegetables are Great</span></a></li></ul>    </div>
+
+    
+    
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+</div>  </div>
+  <div class="views-row views-row-2 views-row-even clearfix">
+    
+<div class="panelizer-view-mode node node-teaser node-panopoly-page node-3 page-teaser node-promoted node-promoted">
+        <H2 >
+              <a href="/content/great-vegetables">Great Vegetables</a>
+          </H2>
+      
+<div class="panel-display boxton clearfix radix-boxton" >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-entity-field pane-node-field-featured-image no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-field-featured-image field-type-image field-label-hidden view-mode-_custom_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/great-vegetables"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/great-veggies.jpg?itok=7AQoj-sa" /></a></figure></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-body no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-_custom_display"><div class="field-items"><div class="field-item even"><p>Chinese Mallow kurrat garbanzo ulluco, yam sierra leone bologi pea eggplant, bamboo shoot salsify kale. Sea kale ti lagos bologi sea beet. Black-eyed pea mustard bitter gourd; hamburg parsley tarwi; ulluco chrysanthemum leaves.</p><p>Dandelion chinese cabbage garbanzo ceylon spinach canna, lizard's tail pigeon pea wild leek orache. Sorrel manioc lizard's tail scorzonera moth bean drumstick. Chaya epazote bok choy, cauliflower, mooli paracress orache.</p></div></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <ul class="links inline"><li class="node-readmore first last"><a href="/content/great-vegetables" rel="tag" title="Great Vegetables">Read more<span class="element-invisible"> about Great Vegetables</span></a></li></ul>    </div>
+
+    
+    
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+</div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last clearfix">
+    
+<div class="panelizer-view-mode node node-teaser node-panopoly-page node-1 page-teaser node-promoted node-promoted">
+        <H2 >
+              <a href="/content/lovely-vegetables">Lovely Vegetables</a>
+          </H2>
+      
+<div class="panel-display boxton clearfix radix-boxton" >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-entity-field pane-node-field-featured-image no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-field-featured-image field-type-image field-label-hidden view-mode-_custom_display"><div class="field-items"><figure class="clearfix field-item even"><a href="/content/lovely-vegetables"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/lovely-vegetables.jpg?itok=Ye4FBfeP" /></a></figure></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-entity-field pane-node-body no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <div class="field field-name-body field-type-text-with-summary field-label-hidden view-mode-_custom_display"><div class="field-items"><div class="field-item even"><p>Burdock, cauliflower mooli burdock gobo tepary bean collard greens ginger! Bell pepper lotus root pignut bamboo shoot; cardoon. Horseradish yacón mustard dolichos bean epazote peanut azuki bean catsear - tatsoi. Cassava turnip greens jícama moth bean; corn salad, soko beetroot hamburg parsley ginger. Garden Rocket celery bitter gourd winter melon kuka; fiddlehead. Aubergine, collard greens gobo, tigernut zucchini, earthnut pea pumpkin pak choy rutabaga.</p><p>Chickweed kohlrabi ulluco melokhia lentil.</p></div></div></div>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><div class="panel-pane pane-node-links link-wrapper no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <ul class="links inline"><li class="node-readmore first last"><a href="/content/lovely-vegetables" rel="tag" title="Lovely Vegetables">Read more<span class="element-invisible"> about Lovely Vegetables</span></a></li></ul>    </div>
+
+    
+    
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+</div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-md-4 radix-layouts-sidebar panel-panel">
+        <div class="panel-panel-inner">
+          <div class="panel-pane pane-search-box no-title block">
+  <div class="block-inner clearfix">
+    
+            
+    
+    <div class="block-content">
+      <form class="search-form" action="/search/node" method="post" id="search-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-keys">
+  <label for="edit-keys">Enter your keywords </label>
+ <input type="text" id="edit-keys" name="keys" value="" size="" maxlength="255" class="form-text" />
+</div>
+<input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-NMjNVWqPGIkTufQrKoBTROAAT8npA23cSd2T-9Pxsjw" />
+<input type="hidden" name="form_id" value="search_form" />
+</div></form>    </div>
+
+    
+    
+  </div>
+</div>
+<div class="panel-separator"></div><section class="panel-pane pane-views-panes pane-panopoly-demo-demo-listing block">
+  <div class="block-inner clearfix">
+    
+              <h2 class="pane-title block-title">Demo Items</h2>
+        
+    
+    <div class="block-content">
+      <div class="view view-panopoly-demo view-id-panopoly_demo view-display-id-demo_listing view-dom-id-ca6e29449c12dce5fdfa4c3b6644cac3">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first clearfix">
+      
+  <div class="views-field views-field-field-featured-image">        <div class="field-content listing-image"><a href="/content/content-demo"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/bell-peppers-et-al.jpg?itok=66DJ6eMF" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/content-demo">Content Demo</a></span>  </div>  
+  <div class="views-field views-field-created">        <span class="field-content">March 20, 2012</span>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even clearfix">
+      
+  <div class="views-field views-field-field-featured-image">        <div class="field-content listing-image"><a href="/content/lovely-vegetables"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/lovely-vegetables.jpg?itok=Ye4FBfeP" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/lovely-vegetables">Lovely Vegetables</a></span>  </div>  
+  <div class="views-field views-field-created">        <span class="field-content">January 11, 2012</span>  </div>  </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last clearfix">
+      
+  <div class="views-field views-field-field-featured-image">        <div class="field-content listing-image"><a href="/content/great-vegetables"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/great-veggies.jpg?itok=7AQoj-sa" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/great-vegetables">Great Vegetables</a></span>  </div>  
+  <div class="views-field views-field-created">        <span class="field-content">October 12, 2011</span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</section>
+<div class="panel-separator"></div><section class="panel-pane pane-views-panes pane-panopoly-demo-list-featured-demo-items block">
+  <div class="block-inner clearfix">
+    
+              <h2 class="pane-title block-title">Featured Demo Items</h2>
+        
+    
+    <div class="block-content">
+      <div class="view view-panopoly-demo view-id-panopoly_demo view-display-id-list_featured_demo_items view-dom-id-49fbb8a47c35116abd9675ffd432b1d4">
+        
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first clearfix">
+      
+  <div class="views-field views-field-field-featured-image">        <div class="field-content listing-image"><a href="/content/content-demo"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/bell-peppers-et-al.jpg?itok=66DJ6eMF" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/content-demo">Content Demo</a></span>  </div>  
+  <span class="views-field views-field-name">    <span class="views-label views-label-name">Posted by</span>    <span class="field-content"><span class="username">admin</span></span>  </span>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Garlic radicchio chaya. Mizuna greens moth bean horseradish urad bean? Gobo new zealand spinach; aubergine manioc mustard, celtuce winter purslane corn salad celeriac garbanzo.</p></div>  </div>  </div>
+  <div class="views-row views-row-2 views-row-even views-row-last clearfix">
+      
+  <div class="views-field views-field-field-featured-image">        <div class="field-content listing-image"><a href="/content/great-vegetables"><img class="panopoly-image-quarter image-style-panopoly-image-quarter" src="http://mybfbase.loc/sites/default/files/styles/panopoly_image_quarter/public/pages/great-veggies.jpg?itok=7AQoj-sa" /></a></div>  </div>  
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/content/great-vegetables">Great Vegetables</a></span>  </div>  
+  <span class="views-field views-field-name">    <span class="views-label views-label-name">Posted by</span>    <span class="field-content"><span class="username">admin</span></span>  </span>  
+  <div class="views-field views-field-body">        <div class="field-content"><p>Chinese Mallow kurrat garbanzo ulluco, yam sierra leone bologi pea eggplant, bamboo shoot salsify kale. Sea kale ti lagos bologi sea beet.</p></div>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+
+    
+    
+  </div>
+</section>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div><!-- /.burr-flipped -->
+
+  </div>              </div>
+            
+            <!-- !Feed Icons -->
+            
+            
+          </section><!-- /end #main-content -->
+
+          <!-- !Content Aside Region-->
+          
+        </div><!-- /end .content-inner -->
+      </main><!-- /end #content-column -->
+
+      <!-- !Sidebar Regions -->
+            
+    </div><!-- /end #columns -->
+
+    <!-- !Tertiary Content Region -->
+    
+    <!-- !Footer -->
+    
+  </div>
+</div>
+  <script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_widgets/panopoly-widgets.js?npbij0"></script>
+<script src="http://mybfbase.loc/profiles/bf_base/modules/panopoly/panopoly_widgets/jquery-ui-tabs-rotate.js?npbij0"></script>
+</body>
+</html>
