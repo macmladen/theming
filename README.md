@@ -19,6 +19,7 @@ Just clone the repository the usual way, make `/drupal_root` accessible as *docr
 *Recommended* way to install is `drush` way *but please* change anything in curly brackets `{` and `}` with your own data, these are _dummies_ and *that does not work!*
 
 ```shell
+# drush install the site
 drush si standard \
   --db-su={db_user_to_create_db} \
   --db-su-pw={db_pass_to_create_db} \
@@ -33,13 +34,38 @@ drush si standard \
 
 This installation may not go well and you may need to repeat same command (first may just made the **db** and fail to proceed claiming that there is no db for it. The **same** next run should go just fine).
 
-After Drupal is operational (first check by opening in browser), you need few more modules for themes that are dependant on them. Also, in order to build themes from the base themes, drush requires those themes to be enabled first. Then they may (and I would say should) be disabled so we end up only with enabled themes that are going to be tested.
+After Drupal is operational (first check by opening in browser), you need few more modules for themes that are dependent on them. Also, in order to build themes from the base themes, drush requires those themes to be enabled first. Then they may (and I would say should) be disabled so we end up only with enabled themes that are going to be tested.
+
+```
+# Let it be world writable
+chmod -R 777 drupal_root/sites/default/files
+
+# Get rid of toolbar and into Adminimal
+drush -r drupal_root/ en -y adminimal_admin_menu
+
+# Activate all needed modules for themes
+drush -r drupal_root/ en -y libraries html5_tools elements jquery_update magic
+
+# Useful for some further style testing
+#drush -r drupal_root/ en -y styleguide styleguide_palette
+```
 
 ## Testing
 
-There is shell script that changes theme and downloads resulting HTML to some directory. However it *must be* adapted in order to work, it is not done foolproof, it does not ask for any input and goes over themes added in the `ALLTHEMES` array.
+First we need some content. To lessen the hassle, lets just have `drush` do that for us, shall we?
 
-It will set the theme, download front page as HTML to proper file in target directory and then it will **pause** so you can reload in browser and make screen dump. I activate Firefox built in **Inspection** and choose **performance** to get HTML / CSS / JS sizes. You may also use **YSlow** to analyse even further but I suspect that results will be quite similar unless you also make some other alteration to code generation by using some modules like **AdvAgg** or change server options. But you already have everything so knock yourself out :)
+```
+# Generate test content, 20 pages, 20 articles
+drush -r drupal_root/ en -y devel_generate
+drush -r drupal_root/ generate-content 20 --types=page
+drush -r drupal_root/ generate-content 20 --types=article
+```
+
+Included shell script changes theme and saves resulting HTML to target directory. However it *must be* adapted in order to work, it is not done foolproof, it does not ask for any input and only goes over themes added in the `ALLTHEMES` array.
+
+It will set the theme, save front page as HTML to theme named file in target directory and then it will **pause** so you can reload in browser and make screenshot (On Mac CMD+SHIFT+4, [SPACE], then click on browser to select and dump screen).
+
+I activate Firefox built in **Inspection** and choose **performance** to get HTML / CSS / JS sizes. You may also use **YSlow** to analyse even further but I suspect that results will be quite similar unless you also making some other alteration to code generation by using some modules like **AdvAgg** or change server options. You already have everything at yours disposal so knock yourself out :)
 
 You just execute it by
 
