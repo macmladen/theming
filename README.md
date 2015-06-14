@@ -4,9 +4,9 @@ Theming experiments in search for HTML 5 and responsive excellence in Drupal 7 t
 
 ## CAVEAT
 
-> Shell scripts *must be changed* with your own data like user names, directory names and passwords in order to be useful.
+> **Shell scripts must be changed** with your own data like user names, directory names and passwords in order to be useful.
 
-> Nothing here is _*fool proof*_ and nothing is supposed to be _user friendly_ as this is [developers](https://youtu.be/I14b-C67EXY?t=1m24s) testing repository and as such, assumes basic knowledge of setting up Drupal website and testing by using command line.
+> **Nothing here is _fool proof_** and nothing is supposed to be _user friendly_ as this is [developers](https://youtu.be/I14b-C67EXY?t=1m24s) testing repository and as such, assumes basic knowledge of setting up Drupal website and testing by using command line.
 
 This is intended to be tested on local machine with local web server environment so if you are still here you know what to do.
 
