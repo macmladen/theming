@@ -13,10 +13,12 @@ PATH=/Users/mladen/Sites/drush/:$PATH
 #   - Other standalone themes which could be a good start
 #
 # TODO:
+# - auto fill ALL_THEMES
 # - some other testing method like behat?
 
-DRUPAL_ROOT=drupal
+DRUPAL_ROOT=drupal_root
 DRUPAL_SITE=theming.loc
+TEST_HTML=test_theme_html
 ALLTHEMES=(
   "bartik"
   "seven"
@@ -52,7 +54,7 @@ ALLTHEMES=(
 ## Testing Drupal themes
 for THEME in "${ALLTHEMES[@]}"; do
   drush -r ${DRUPAL_ROOT} vset theme_default "${THEME}"
-  curl -Ls http://${DRUPAL_SITE} > theme_html/"${THEME}".html
+  curl -Ls http://${DRUPAL_SITE} > ${TEST_HTML}/"${THEME}".html
   # This pauses so you can reload page in browser and inspect performance
   # -p "Press [SPACE] to continue"
   read -n 1
