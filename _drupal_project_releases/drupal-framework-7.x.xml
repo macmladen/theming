@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns:dc="http://purl.org/dc/elements/1.1/">
+<title>Framework</title>
+<short_name>framework</short_name>
+<dc:creator>andregriffin</dc:creator>
+<type>project_theme</type>
+<api_version>7.x</api_version>
+<recommended_major>3</recommended_major>
+<supported_majors>3</supported_majors>
+<default_major>3</default_major>
+<project_status>published</project_status>
+<link>https://www.drupal.org/project/framework</link>
+  <terms>
+   <term><name>Projects</name><value>Themes</value></term>
+   <term><name>Maintenance status</name><value>Minimally maintained</value></term>
+   <term><name>Development status</name><value>No further development</value></term>
+  </terms>
+<releases>
+ <release>
+  <name>framework 7.x-3.6</name>
+  <version>7.x-3.6</version>
+  <tag>7.x-3.6</tag>
+  <version_major>3</version_major>
+  <version_patch>6</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1328990</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.6.tar.gz</download_link>
+  <date>1320214533</date>
+  <mdhash>ac50312e55e16bf576005a84d3628975</mdhash>
+  <filesize>31423</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.6.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>ac50312e55e16bf576005a84d3628975</md5>
+    <size>31423</size>
+    <filedate>1320214533</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.6.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>f5a6711ea2c289c85f5ae09f3888ce07</md5>
+    <size>35161</size>
+    <filedate>1320214533</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.5</name>
+  <version>7.x-3.5</version>
+  <tag>7.x-3.5</tag>
+  <version_major>3</version_major>
+  <version_patch>5</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1262708</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.5.tar.gz</download_link>
+  <date>1314564416</date>
+  <mdhash>6b9eebe4adc7ece1bb97f0fe0c555a4b</mdhash>
+  <filesize>30768</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.5.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6b9eebe4adc7ece1bb97f0fe0c555a4b</md5>
+    <size>30768</size>
+    <filedate>1314564416</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.5.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>916e9a4143146605d07cb5d35cf32adc</md5>
+    <size>34735</size>
+    <filedate>1314564416</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.4</name>
+  <version>7.x-3.4</version>
+  <tag>7.x-3.4</tag>
+  <version_major>3</version_major>
+  <version_patch>4</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1065510</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.4.tar.gz</download_link>
+  <date>1298008602</date>
+  <mdhash>98edfba5a9800282ac8d31132810474d</mdhash>
+  <filesize>57933</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.4.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>98edfba5a9800282ac8d31132810474d</md5>
+    <size>57933</size>
+    <filedate>1298008602</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.4.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>bc2096535276bc236795950bcfe3895f</md5>
+    <size>62213</size>
+    <filedate>1298008602</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.3</name>
+  <version>7.x-3.3</version>
+  <tag>7.x-3.3</tag>
+  <version_major>3</version_major>
+  <version_patch>3</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1053138</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.3.tar.gz</download_link>
+  <date>1297032991</date>
+  <mdhash>6fe29d89cca52a4b9b80b06e11df52be</mdhash>
+  <filesize>58020</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.3.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6fe29d89cca52a4b9b80b06e11df52be</md5>
+    <size>58020</size>
+    <filedate>1297032991</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.3.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>c5b31df22d6e939dd6392852b2d666d6</md5>
+    <size>61452</size>
+    <filedate>1297032991</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.2</name>
+  <version>7.x-3.2</version>
+  <tag>7.x-3.2</tag>
+  <version_major>3</version_major>
+  <version_patch>2</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1042988</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.2.tar.gz</download_link>
+  <date>1296179204</date>
+  <mdhash>8c051cab77ddd57632d3212811f29a2d</mdhash>
+  <filesize>57217</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.2.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>8c051cab77ddd57632d3212811f29a2d</md5>
+    <size>57217</size>
+    <filedate>1296179204</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.2.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>b02b966ad0609899763ff6e2a7eea71d</md5>
+    <size>60386</size>
+    <filedate>1296179204</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>Bug fixes</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.1</name>
+  <version>7.x-3.1</version>
+  <tag>7.x-3.1</tag>
+  <version_major>3</version_major>
+  <version_patch>1</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1042726</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.1.tar.gz</download_link>
+  <date>1296165906</date>
+  <mdhash>6add2f9717b40f9b1af1205dba807e15</mdhash>
+  <filesize>53164</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.1.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6add2f9717b40f9b1af1205dba807e15</md5>
+    <size>53164</size>
+    <filedate>1296165906</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.1.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>d5a6e212c25376ecb0b12cdc1f2fcf44</md5>
+    <size>56966</size>
+    <filedate>1296165906</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.0</name>
+  <version>7.x-3.0</version>
+  <tag>7.x-3.0</tag>
+  <version_major>3</version_major>
+  <version_patch>0</version_patch>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1042662</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.0.tar.gz</download_link>
+  <date>1296162699</date>
+  <mdhash>6fa33902aa447d878d6cf4b40ae3410a</mdhash>
+  <filesize>53155</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.0.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>6fa33902aa447d878d6cf4b40ae3410a</md5>
+    <size>53155</size>
+    <filedate>1296162699</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.0.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>84f72b673d1f8e2477c611d5c10a5958</md5>
+    <size>56968</size>
+    <filedate>1296162699</filedate>
+   </file>
+  </files>
+  <terms>
+   <term><name>Release type</name><value>New features</value></term>
+  </terms>
+ </release>
+ <release>
+  <name>framework 7.x-3.x-dev</name>
+  <version>7.x-3.x-dev</version>
+  <tag>7.x-3.x</tag>
+  <version_major>3</version_major>
+  <version_extra>dev</version_extra>
+  <status>published</status>
+  <release_link>https://www.drupal.org/node/1042640</release_link>
+  <download_link>http://ftp.drupal.org/files/projects/framework-7.x-3.x-dev.tar.gz</download_link>
+  <date>1380580184</date>
+  <mdhash>b6a07e2ba497a26e703134c21ec59fed</mdhash>
+  <filesize>31435</filesize>
+  <files>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.x-dev.tar.gz</url>
+    <archive_type>tar.gz</archive_type>
+    <md5>b6a07e2ba497a26e703134c21ec59fed</md5>
+    <size>31435</size>
+    <filedate>1380580184</filedate>
+   </file>
+   <file>
+    <url>http://ftp.drupal.org/files/projects/framework-7.x-3.x-dev.zip</url>
+    <archive_type>zip</archive_type>
+    <md5>0af963bcaeddce95806166e991ebd4f8</md5>
+    <size>35161</size>
+    <filedate>1380580184</filedate>
+   </file>
+  </files>
+ </release>
+</releases>
+</project>

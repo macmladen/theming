@@ -1,0 +1,8 @@
+http://updates.drupal.org/release-history/project-list/all
+https://www.drupal.org/files/releases.tsv
+
+http://updates.drupal.org/release-history/views/6.x
+
+https://www.drupal.org/project/usage
+https://www.drupal.org/project/projectstats
+http://atendesigngroup.com/blog/drupalorg-project-retention-download-usage
