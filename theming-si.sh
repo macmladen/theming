@@ -1,5 +1,10 @@
-# Install command - fails? run again
-drush -r drupal_root/ si standard \
+#!/bin/sh
+# Somewhat automated site install
+# you may need to add drush to PATH
+cd drupal_root/
+
+# Install site command - fails? run again
+drush si standard \
   --db-su=lokalni \
   --db-su-pw=lokalni \
   --db-url=mysql://lokalni:lokalni@localhost/theming \
@@ -10,26 +15,31 @@ drush -r drupal_root/ si standard \
   --site-name="Theming testing" \
   install_configure_form.site_default_country=RS
 
-# Let it be world writable
+# Let files be world writable
 chmod -R 777 drupal_root/sites/default/files
 
 # Get rid of toolbar and into Adminimal
-drush -r drupal_root/ en -y adminimal_admin_menu
+drush en -y adminimal_admin_menu
 
 # Activate all needed modules for themes
-drush -r drupal_root/ en -y libraries html5_tools elements jquery_update magic
+drush en -y libraries html5_tools elements jquery_update magic
+# Kalatheme
+# Libraries API 2.1+
+# Panels 3.3+
+# Views 3.x
+# JQuery Update 2.x (with JQuery version set to 1.7+)
+# PHP 5.3+
+# Optional but highly recommended: Panopoly Theme.
+# Optional: Breakpoints
+drush en -y panels breakpoints
 
 # Useful for some further style testing
-#drush -r drupal_root/ en -y styleguide styleguide_palette
-
-# Generate test content, 20 pages, 20 articles
-drush -r drupal_root/ en -y devel_generate
-drush -r drupal_root/ generate-content 20 --types=page
-drush -r drupal_root/ generate-content 20 --types=article
+#drush en -y styleguide styleguide_palette
 
 
-# Activate all needed modules for themes
-drush -r drupal_root/ en -y \
+# Activate all base themes to be able to drush generate subthemes
+# commenterd ones are NOT yet drush buildable
+drush en -y \
   adaptivetheme \
   arctica \
   aurora \
@@ -51,11 +61,11 @@ drush -r drupal_root/ en -y \
   tundra \
   zen
 
-# Build drush subthemes 
+# Build drush subthemes
 
 # Activate all starter themes
 # Activate all contrib themes
-drush -r drupal_root/ en -y \
+drush en -y \
   bamboo \
   bootstrap_clean_blog \
   business \
@@ -70,8 +80,8 @@ drush -r drupal_root/ en -y \
   touchpro \
   zeropoint
 
-# Activate all needed modules for themes
-drush -r drupal_root/ en -y \
+# Activate all generated subthemes
+drush en -y \
   adaptive_cat \
   aurora_cat \
   bassline_cat \
@@ -88,3 +98,26 @@ drush -r drupal_root/ en -y \
   radix_spacelab \
   sassoncat \
   zen_cat
+
+# Deactivate base themesthat are not needed
+drush en -y \
+  adaptivetheme \
+  arctica \
+  aurora \
+#  basic \
+  bassline \
+  boilerplate \
+  bootstrap \
+#  boron \
+#  framework \
+  gesso \
+  groundwork \
+  kalatheme \
+  mothership \
+  om \
+  omega \
+  radix \
+  sasson \
+#  titon \
+  tundra \
+  zen
