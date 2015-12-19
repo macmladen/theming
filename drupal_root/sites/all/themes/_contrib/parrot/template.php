@@ -15,6 +15,7 @@ function parrot_preprocess_page(&$vars,$hook) {
 
   //webfont
   //drupal_add_css('http://cloud.webtype.com/css/CXXXX.css','external');
+  drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css','external');
 
   //googlefont
   //  drupal_add_css('http://fonts.googleapis.com/css?family=Bree+Serif','external');
@@ -22,7 +23,7 @@ function parrot_preprocess_page(&$vars,$hook) {
   // If this is a panel page, add template suggestions.
   // Must have Ctools Page Manager enabled. Uncomment to use.
   if (module_exists('page_manager')) {
-    if(isset($panel_page) && $panel_page === page_manager_get_current_page()) {
+    if($panel_page = page_manager_get_current_page()) {
       // add a generic suggestion for all panel pages
       $vars['theme_hook_suggestions'][] = 'page__panel';
 

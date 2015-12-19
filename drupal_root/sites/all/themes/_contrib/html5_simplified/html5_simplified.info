@@ -26,9 +26,9 @@ regions[content-right] = Content Right
 regions[signup] = Signup
 regions[footer] = Footer
 
-; Information added by Drupal.org packaging script on 2015-06-02
+; Information added by Drupal.org packaging script on 2015-11-19
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "html5_simplified"
-datestamp = "1433230684"
+datestamp = "1447931341"
 

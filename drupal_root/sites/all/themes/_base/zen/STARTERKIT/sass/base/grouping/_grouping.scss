@@ -25,7 +25,7 @@
 blockquote {
   // Set 1 unit of vertical rhythm on the top and bottom margin.
   // Also indent the quote on both sides.
-  @include output-rhythm(margin, rhythm(1) $indent-amount);
+  @include margin(0 $indent-amount 1);
 }
 
 // Figures
@@ -42,7 +42,7 @@ blockquote {
 
 figure {
   // Address margin not present in IE 8/9 and Safari.
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(0 0 1);
 }
 
 figcaption {
@@ -74,12 +74,14 @@ hr {
 //
 // Markup: grouping-p.hbs
 //
+// Weight: -2
+//
 // Style guide: base.grouping.p
 
 p,
 pre {
   // Set 1 unit of vertical rhythm on the top and bottom margin.
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
 }
 
 // Preformatted text
@@ -109,6 +111,8 @@ pre {
 
 // Lists
 //
+// Weight: -1
+//
 // Style guide: base.grouping.lists
 
 // Unordered list
@@ -135,6 +139,8 @@ pre {
 //
 // Markup: grouping-lists-dl.hbs
 //
+// Weight: 1
+//
 // Style guide: base.grouping.lists.dl
 
 dl,
@@ -142,7 +148,7 @@ menu,
 ol,
 ul {
   // Address margins set differently in IE 6/7.
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
 }
 
 // Turn off margins on nested lists.

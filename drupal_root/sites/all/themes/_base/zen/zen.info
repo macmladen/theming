@@ -35,9 +35,9 @@ settings[zen_rebuild_registry]     = 0
 
 plugins[panels][layouts] = panels-layouts
 
-; Information added by Drupal.org packaging script on 2015-05-28
-version = "7.x-6.0-alpha1+121-dev"
+; Information added by Drupal.org packaging script on 2015-08-26
+version = "7.x-6.0-alpha6"
 core = "7.x"
 project = "zen"
-datestamp = "1432847588"
+datestamp = "1440595141"
 

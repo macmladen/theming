@@ -1,3 +1,44 @@
+Panopoly Admin 7.x-1.29, 2015-11-18
+----------------------------
+- User base_url for showing site url over permalink field (label).
+
+Panopoly Admin 7.x-1.28, 2015-10-21
+----------------------------
+- Update to Drupal 7.41 for SA-CORE-2015-004 and jquery_update for SA-
+  CONTRIB-2015-158.
+- Remove question mark from Enable/Disable link on pane library.
+- Update to simplified_menu_admin 1.0.
+
+Panopoly Admin 7.x-1.27, 2015-09-02
+----------------------------
+- No changes since last release.
+
+Panopoly Admin 7.x-1.26, 2015-08-19
+----------------------------
+- Multilingual options for menu does not work.
+- Does panopoly_admin really depend on panopoly_theme?.
+
+Panopoly Admin 7.x-1.25, 2015-07-08
+----------------------------
+- Update to admin_views 1.5 for SA-CONTRIB-2015-132.
+
+Panopoly Admin 7.x-1.24, 2015-07-02
+----------------------------
+- No changes since last release.
+
+Panopoly Admin 7.x-1.23, 2015-06-17
+----------------------------
+- Update to jquery_update 2.6 for SA-CONTRIB-2015-123.
+- Update jquery_update to version 2.5.
+- Patch breakpoints so it doesn't make cache clear slow on sites with enabled
+  themes not using breakpoints.
+
+Panopoly Admin 7.x-1.22, 2015-06-04
+----------------------------
+- Move jquery_update to panopoly_core.make and .info.
+- Replace 'und' with the constant LANGUAGE_NONE for multi language site in
+  panopoly_admin.
+
 Panopoly Admin 7.x-1.21, 2015-04-29
 ----------------------------
 - Clean up instances of deprecated panpoly_theme layouts.

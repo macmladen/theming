@@ -24,7 +24,10 @@ Susy is enabled by default, to change that comment out the require 'susy', and u
 The chosen grid framework will need to be installed via the GEM file.
 
 ### Susy
+`gem install sass -v 3.3.13`
+
 `gem install susy -v 1.0.9`
+
 Check that the version used is at least 1.0.8, but not yet version 2+.
 
 ### Zen Grids
@@ -60,6 +63,20 @@ The theme is not intended to be a *"base theme"*, it is meant to be a *"starter 
 
 To install, copy the folder "parrot" from this repo into /sites/all/themes/ of your Drupal 7 site. Rename the folder to your desired theme name, as well, rename the "parrot.info" file to match the theme name. You will also have to search the "template.php" for "parrot" and replace the name with your new theme name. This name must be lowercase, with no spaces, as it is a machine name. You can then inside the .info file add your Fancy theme title. Renaming is not required for use.
 
+To use the Parrot Styles feature, you have to edit: /plugins/styles/parrot_styles/parrot_styles.inc and change Line 16 theme name to your theme's name.
+
+```php
+Line 15: // Change theme name 'parrot' to match changed theme name.
+Line 16: 'path' => drupal_get_path('theme', 'parrot') . '/plugins/styles/parrot_styles',
+```
+
+If theme was called mythemename:
+
+```php
+Line 15: // Change theme name 'parrot' to match changed theme name.
+Line 16: 'path' => drupal_get_path('theme', 'mythemename') . '/plugins/styles/parrot_styles',
+```
+
 The theme uses SASS to build the CSS, then is compiled into the /css/style.css file. The SASS files are organized in a file structure that is based on overall site structure, not specific components. The structure is as follows in the /css/sass folder:
 
 * /base
@@ -80,7 +97,7 @@ Let's look at these folders, and how the SASS files inside each are intended to 
 * **_variables.scss** - This contains the *Variables* used in the other CSS selectors, for example, theme specific colors. If you need to edit or add custom *Variables*, they should be placed in this file.
 
 
-### The files in /base and their intended use:
+### The files in /components and their intended use:
 
 * **_accordion.scss** - This contains the common CSS selectors used to display *Accordions* visually on your site. If you need to edit or add custom *Accordion* related CSS, it should be placed in this file.
 * **_alerts.scss** - This contains the common CSS selectors used to display *Alerts* or *Messages* visually on your site. If you need to edit or add custom *Alert* related CSS, it should be placed in this file.
@@ -109,7 +126,7 @@ To use Parrot Styles, change the theme name on line 16 of /plugins/styles/parrot
 
 ## Please Note ##
 
-This project is a on Drupal.org as well, but does not include some of the non-gpl libraries. This github project will remain, as it allows you to Fork it, and improve the theme by adding Pull Requests.
+This project is on Drupal.org as well, but does not include some of the non-gpl libraries. This github project will remain, as it allows you to Fork it, and improve the theme by adding Pull Requests.
 
 Drupal.org Parrot Theme https://drupal.org/project/parrot
 

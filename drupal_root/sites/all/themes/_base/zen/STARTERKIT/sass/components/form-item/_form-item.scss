@@ -12,7 +12,7 @@
 //
 // Markup: form-item.hbs
 //
-// Style guide: components.forms.form-item
+// Style guide: forms.form-item
 
 // Form item (radio)
 //
@@ -24,11 +24,11 @@
 //
 // Markup: form-item--radio.hbs
 //
-// Style guide: components.forms.form-item--radio
+// Style guide: forms.form-item--radio
 
 .form-item,
 %form-item {
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
 
   // The part of the label that indicates a required field.
   &__required {
@@ -37,7 +37,7 @@
 
   // The descriptive help text (separate from the label).
   &__description {
-    font-size: .85em;
+    @include font-size(s);
   }
 
   &--inline {

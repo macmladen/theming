@@ -1,3 +1,37 @@
+Panopoly WYSIWYG 7.x-1.29, 2015-11-18
+------------------------------
+- Update to Linkit 3.4.
+
+Panopoly WYSIWYG 7.x-1.28, 2015-10-21
+------------------------------
+- Incorporate patch that eases creating new text formats.
+
+Panopoly WYSIWYG 7.x-1.27, 2015-09-02
+------------------------------
+- No changes since last release.
+
+Panopoly WYSIWYG 7.x-1.26, 2015-08-19
+------------------------------
+- Update to image_resize_filter 1.15.
+- Image Resize Filter never utilized.
+
+Panopoly WYSIWYG 7.x-1.25, 2015-07-08
+------------------------------
+- No changes since last release.
+
+Panopoly WYSIWYG 7.x-1.24, 2015-07-02
+------------------------------
+- No changes since last release.
+
+Panopoly WYSIWYG 7.x-1.23, 2015-06-17
+------------------------------
+- No changes since last release.
+
+Panopoly WYSIWYG 7.x-1.22, 2015-06-04
+------------------------------
+- Warning when content includes duplicate IDs and a user defined text format
+  that allows them.
+
 Panopoly WYSIWYG 7.x-1.21, 2015-04-29
 ------------------------------
 - WYSIWYG format shouldn't use "Convert line breaks into HTML" filter.

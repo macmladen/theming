@@ -16,21 +16,16 @@ Drupal.behaviors.mediaElement = {
   attach: function (context, settings) {
     if (settings.media && settings.media.elements) {
       $.each(settings.media.elements, function(selector) {
-        var configuration = settings.media.elements[selector];
-        // The user has JavaScript enabled, so display the browse field and hide
-        // the upload and attach fields which are only used as a fallback in
-        // case the user is unable to use the media browser.
-        $(selector, context).children('.browse').show();
-        $(selector, context).children('.upload').hide();
-        $(selector, context).children('.attach').hide();
-        $(selector, context).children('.browse').unbind().bind('click', {configuration: configuration}, Drupal.media.openBrowser);
-      });
-    }
-  },
-  detach: function (context, settings) {
-    if (settings.media && settings.media.elements) {
-      $.each(settings.media.elements, function(selector) {
-        $(selector, context).children('.browse').unbind('click', Drupal.media.openBrowser);
+        $(selector, context).once('media-browser-launch', function () {
+          var configuration = settings.media.elements[selector];
+          // The user has JavaScript enabled, so display the browse field and hide
+          // the upload and attach fields which are only used as a fallback in
+          // case the user is unable to use the media browser.
+          $(selector, context).children('.browse').show();
+          $(selector, context).children('.upload').hide();
+          $(selector, context).children('.attach').hide();
+          $(selector, context).children('.browse').bind('click', {configuration: configuration}, Drupal.media.openBrowser);
+        });
       });
     }
   }
@@ -76,31 +71,19 @@ Drupal.media.openBrowser = function (event) {
       return;
     }
 
-    var mediaFileValue;
-    // Process the value based on multiselect.
-    if (mediaFiles.length > 1) {
-      // Reverse array to have files in correct order
-      mediaFiles.reverse();
-      // Concatenate the array into a comma separated string.
-      mediaFileValue = mediaFiles.map(function(file) {
-        return file.fid;
-      }).join(',');
-    }
-    else {
-      // Grab the first of the selected media files.
-      mediaFileValue = mediaFiles[0].fid;
-
-      // Display a preview of the file using the selected media file's display.
-      previewField.html(mediaFileValue.preview);
-    }
+    // Grab the first of the selected media files.
+    var mediaFile = mediaFiles[0];
 
     // Set the value of the hidden file ID field and trigger a change.
-    uploadField.val(mediaFileValue);
+    uploadField.val(mediaFile.fid);
     uploadField.trigger('change');
 
     // Find the attach button and automatically trigger it.
     var attachButton = uploadField.siblings('.attach');
     attachButton.trigger('mousedown');
+
+    // Display a preview of the file using the selected media file's display.
+    previewField.html(mediaFile.preview);
   }, configuration);
 
   return false;

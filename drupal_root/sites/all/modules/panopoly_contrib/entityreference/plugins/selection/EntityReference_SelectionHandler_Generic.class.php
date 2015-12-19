@@ -149,23 +149,6 @@ class EntityReference_SelectionHandler_Generic implements EntityReference_Select
       );
     }
 
-    // Provide options to reference revisions if the entity supports it.
-    if (!empty($entity_info['revision table'])) {
-      $form['reference_revisions'] = array(
-        '#type' => 'checkbox',
-        '#title' => t('Reference revisions'),
-        '#default_value' => !empty($field['settings']['handler_settings']['reference_revisions']),
-        '#description' => t('When this is enabled, the reference will track the current revision at the time it is referenced. When disabled the reference will always point to the newest revision of the entity.'),
-      );
-      $form['lock_revision'] = array(
-        '#type' => 'checkbox',
-        '#title' => t('Lock the revision.'),
-        '#default_value' => !empty($field['settings']['handler_settings']['lock_revision']),
-        '#description' => t('Locks the field to the revision of the entity at the time it was referenced. If this is disabled the revision will be updated each time the referencing entity is saved.'),
-        '#states' => array('visible' => array(':input[name="field[settings][handler_settings][reference_revisions]"]' => array('checked' => TRUE))),
-      );
-    }
-
     return $form;
   }
 
@@ -562,7 +545,7 @@ class EntityReference_SelectionHandler_Generic_taxonomy_term extends EntityRefer
       if ($vocabulary = taxonomy_vocabulary_machine_name_load($bundle)) {
         if ($terms = taxonomy_get_tree($vocabulary->vid, 0, NULL, TRUE)) {
           foreach ($terms as $term) {
-            $options[$vocabulary->machine_name][$term->tid] = str_repeat('-', $term->depth) . check_plain($term->name);
+            $options[$vocabulary->machine_name][$term->tid] = str_repeat('-', $term->depth) . check_plain(entity_label('taxonomy_term', $term));
           }
         }
       }

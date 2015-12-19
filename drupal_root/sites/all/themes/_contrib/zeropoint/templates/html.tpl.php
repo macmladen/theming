@@ -7,7 +7,7 @@
 
 <head><!-- zp7-4.x -->
 <title><?php print $head_title ?></title>
-<?php if (theme_get_setting('grid_responsive') == '1'): ?>
+<?php if (theme_get_setting('grid_responsive')): ?>
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="MobileOptimized" content="width" />
@@ -29,10 +29,10 @@
 <?php print $page_b ?>
 
 <!--[if IE 9]>
-<script type="text/javascript" src="<?php print $base_path . $path_to_zeropoint ?>/js/classList.min.js"></script>
+<script type="text/javascript" async src="<?php print $base_path . $path_to_zeropoint ?>/js/classList.min.js"></script>
 <![endif]-->
 <!--[if gte IE 9]><!-->
-<script type="text/javascript" src="<?php print $base_path . $path_to_zeropoint ?>/js/toggles.js"></script>
+<script type="text/javascript" async src="<?php print $base_path . $path_to_zeropoint ?>/js/toggles.min.js"></script>
 <!--<![endif]-->
 </body>
 </html>

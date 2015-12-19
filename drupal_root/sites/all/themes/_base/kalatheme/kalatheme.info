@@ -38,9 +38,9 @@ settings[font_awesome_cdn] = 1
 
 plugins[panels][styles] = styles
 
-; Information added by Drupal.org packaging script on 2014-12-10
-version = "7.x-4.0-alpha1+2-dev"
+; Information added by Drupal.org packaging script on 2015-06-24
+version = "7.x-4.0-alpha2"
 core = "7.x"
 project = "kalatheme"
-datestamp = "1418194402"
+datestamp = "1435166001"
 

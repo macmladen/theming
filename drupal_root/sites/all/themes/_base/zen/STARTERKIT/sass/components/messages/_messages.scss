@@ -4,27 +4,23 @@
 //
 // Style guide: components.messages
 
-// Messages
+// Single Message
 //
-// A single message.
-//
-// Weight: -1
+// .messages--warning   - Warning messages.
+// .messages--error     - Error messages.
 //
 // Markup: messages-single.hbs
 //
-// .messages--warning   - Warning messages.
-// .messages--error     - Error messages.
+// Weight: -1
 //
 // Style guide: components.messages.single
 
-// Messages
-//
-// Multiple messages.
-//
-// Markup: messages-multiple.hbs
+// Multiple Messages
 //
 // .messages--warning   - Warning messages.
 // .messages--error     - Error messages.
+//
+// Markup: messages-multiple.hbs
 //
 // Style guide: components.messages.multiple
 
@@ -33,18 +29,18 @@
 // Drupal system status reports use just the message colors and no other
 // styling.
 //
-// markup: messages-color.hbs
-//
 // .messages--ok-color      - "Ok" status.
 // .messages--warning-color - Warning status.
 // .messages--error-color   - Error status.
+//
+// markup: messages-color.hbs
 //
 // Style guide: components.messages.status
 
 .messages,
 %messages {
   @extend %messages--ok-color;
-  @include output-rhythm(margin, rhythm(1) 0);
+  @include margin(1 0);
   padding: 10px 10px 10px 50px;
   background-image: inline-image('components/messages/messages--ok.png');
   @if support-legacy-browser(ie, '7') {

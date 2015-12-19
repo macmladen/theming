@@ -758,7 +758,7 @@ class views_many_to_one_helper {
    */
   public $placeholders = array();
 
-  function views_many_to_one_helper(&$handler) {
+  function __construct(&$handler) {
     $this->handler = &$handler;
   }
 
@@ -1586,8 +1586,7 @@ class views_join {
             }
 
             $operator = !empty($info['operator']) ? $info['operator'] : 'IN';
-            $value_count = count($info['value']);
-            $placeholder = '( ' . implode(', ', array_slice(array_keys($arguments), count($arguments) - $value_count, $value_count)) . ' )';
+            $placeholder = '( ' . implode(', ', array_keys($arguments)) . ' )';
           }
           else {
             // With a single value, the '=' operator is implicit.

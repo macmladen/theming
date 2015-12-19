@@ -51,9 +51,9 @@ settings[js_exclude][]  = 'misc/tableheader.js'
 ;multipliers[mobile][] = 1.5x
 ;multipliers[mobile][] = 2x
 
-; Information added by Drupal.org packaging script on 2015-06-10
-version = "7.x-2.0+8-dev"
+; Information added by Drupal.org packaging script on 2015-08-25
+version = "7.x-2.4"
 core = "7.x"
 project = "da_vinci"
-datestamp = "1433945582"
+datestamp = "1440488355"
 

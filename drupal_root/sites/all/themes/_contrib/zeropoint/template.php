@@ -105,9 +105,6 @@ if(theme_get_setting('roundcorners')) {
 if(theme_get_setting('pageicons')) {
   $vars['classes_array'][] = 'pi';
 }
-if(theme_get_setting('headerimg')) {
-  $vars['classes_array'][] = 'himg';
-}
 
 // Add language and site ID classes
   $vars['classes_array'][] = ($vars['language']->language) ? 'lg-'. $vars['language']->language : '';        // Page has lang-x
@@ -137,10 +134,29 @@ $siteid = check_plain(theme_get_setting('siteid'));
       drupal_add_css(drupal_get_path('theme','zeropoint').'/css/yui/grids-responsive-min.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'gt IE 8'), 'every_page' => TRUE, 'weight' => -1));
     }
   }
+global $language;
+$lang_dir = $language->dir;
+if(theme_get_setting('headerimg')) {
+  $vars['classes_array'][] = 'himg';
+  if($lang_dir == 'rtl') {
+    drupal_add_css(drupal_get_path('theme','zeropoint').'/_custom/headerimg-rtl/rotate.php', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 2, 'preprocess' => FALSE));
+  } else {
+    drupal_add_css(drupal_get_path('theme','zeropoint').'/_custom/headerimg/rotate.php', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 2, 'preprocess' => FALSE));
+  }
+}
   drupal_add_css(drupal_get_path('theme','zeropoint').'/css/style-zero.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 3));
   drupal_add_css(drupal_get_path('theme','zeropoint').'/css/'.get_zeropoint_style().'.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 4));
-  drupal_add_css(drupal_get_path('theme','zeropoint').'/_custom/custom-style.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 5));
-  drupal_add_css(drupal_get_path('theme','zeropoint').'/css/print.css', array('group' => CSS_THEME, 'media' => 'print', 'every_page' => TRUE, 'weight' => 6));
+  drupal_add_css(drupal_get_path('theme','zeropoint').'/_custom/custom-style.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 6));
+  drupal_add_css(drupal_get_path('theme','zeropoint').'/css/print.css', array('group' => CSS_THEME, 'media' => 'print', 'every_page' => TRUE, 'weight' => 7));
+
+// Add javascript and CSS files for jquery slideshow.
+if (theme_get_setting('slideshow_display')) {
+  if (drupal_is_front_page() || theme_get_setting('slideshow_all')) {
+    drupal_add_css(drupal_get_path('theme','zeropoint').'/css/slider.css', array('group' => CSS_THEME, 'every_page' => TRUE, 'weight' => 5));
+    drupal_add_js(drupal_get_path('theme', 'zeropoint').'/js/jquery.flexslider-min.js', array('group' => JS_THEME));
+    drupal_add_js(drupal_get_path('theme', 'zeropoint').'/js/slide.js', array('group' => JS_THEME));
+  }
+}
 
 $devlink = theme_get_setting('devlink');
   if ($devlink == '0'){
@@ -219,7 +235,7 @@ function zeropoint_breadcrumb($vars) {
   if (!empty($breadcrumb)) {
 // Provide a navigational heading to give context for breadcrumb links to screen-reader users. Make the heading invisible with .element-invisible.
     $breadcrumb[] = drupal_get_title();
-    $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
+    $output = '<div class="element-invisible">' . t('You are here') . '</div>';
     $lastitem = sizeof($breadcrumb);
     $output .= '<ul class="breadcrumb">';
     $a=1;
@@ -334,22 +350,22 @@ function zeropoint_field__taxonomy_term_reference($vars) {
 /**
  * Social links
  */
-function zeropoint_social_links() {
+function social_links() {
   $social = '';
   if (theme_get_setting('social_links_display')) {
     $displays_possible = array(
-      'facebook' => 'social_links_display_links_facebook',
-      'googleplus' => 'social_links_display_links_googleplus',
-      'twitter' => 'social_links_display_links_twitter',
-      'instagram' => 'social_links_display_links_instagram',
-      'pinterest' => 'social_links_display_links_pinterest',
-      'linkedin' => 'social_links_display_links_linkedin',
-      'youtube' => 'social_links_display_links_youtube',
-      'vimeo' => 'social_links_display_links_vimeo',
-      'flickr' => 'social_links_display_links_flickr',
-      'tumblr' => 'social_links_display_links_tumblr',
-      'skype' => 'social_links_display_links_skype',
-      'myother' => 'social_links_display_links_myother',
+      'facebook' => 'facebook',
+      'googleplus' => 'googleplus',
+      'twitter' => 'twitter',
+      'instagram' => 'instagram',
+      'pinterest' => 'pinterest',
+      'linkedin' => 'linkedin',
+      'youtube' => 'youtube',
+      'vimeo' => 'vimeo',
+      'flickr' => 'flickr',
+      'tumblr' => 'tumblr',
+      'skype' => 'skype',
+      'myother' => 'myother',
     );
     foreach ($displays_possible as $key => $display_possible) {
       $link_possible = $display_possible . '_link';
@@ -357,7 +373,7 @@ function zeropoint_social_links() {
         $url = check_url($link);
         $nofollow = 'nofollow';
         $classes = 'sociallinks ' . $key;
-        $social .= l('', $url, array('attributes' => array('class' => $classes, 'rel' => $nofollow, 'title' => $key)));
+        $social .= l('.', $url, array('attributes' => array('class' => $classes, 'rel' => $nofollow, 'title' => $key)));
       }
     }
   }
@@ -571,7 +587,7 @@ function zeropoint_links__system_main_menu($vars, $is_child=false){
   foreach($vars['links'] as $link){
     // Test for localization options and apply them if they exist.
     if (isset($link['#localized_options']['attributes']) && is_array($link['#localized_options']['attributes'])) {
-      $link['#attributes'] = array_merge_recursive($link['#attributes'], $link['#localized_options']['attributes']);
+      $link['#attributes'] = $link['#localized_options']['attributes'] + $link['#attributes'];
     }
     // Output html for drop-down menu.
     if(empty($link['#title']))
@@ -581,9 +597,16 @@ function zeropoint_links__system_main_menu($vars, $is_child=false){
       $link['#attributes']['class'][] = 'menu-' . $link['#original_link']['mlid'];
 
       if(!empty($link['#below'])){
-        $html .= '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">';
+        if(theme_get_setting('dropdown') == '1') {
+          $html .= '<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">';
+        }
+        if(theme_get_setting('dropdown') == '0') {
+          $html .= '<li class="pure-menu-item">';
+        }
         $html .= l($link['#title'], $link['#href'], array('attributes' => $link['#attributes']));
-        $html .= zeropoint_links__system_main_menu(array('links' => $link['#below']), true);
+        if(theme_get_setting('dropdown') == '1') {
+          $html .= zeropoint_links__system_main_menu(array('links' => $link['#below']), true);
+        }
         $html .= '</li>';
       }
       else
@@ -604,10 +627,10 @@ function login_links(){
   $loginlinks = theme_get_setting('loginlinks');
   if ($loginlinks == '1'){
     if ($user->uid != 0) {
-      print '<h2 class="element-invisible">'.t('Login links').'</h2><ul class="links inline"><li class="uin first"><a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li><li class="uout"><a href="' .url('user/logout'). '">' .t('Logout'). '</a></li></ul>';
+      print '<div class="element-invisible">'.t('Login links').'</div><ul class="links inline"><li class="uin first"><a href="' .url('user/'.$user->uid). '">' .$user->name. '</a></li><li class="uout"><a href="' .url('user/logout'). '">' .t('Logout'). '</a></li></ul>';
     }
     else {
-      print '<h2 class="element-invisible">'.t('Login links').'</h2><ul class="links inline"><li class="ulog first"><a href="' .url('user'). '" rel="nofollow">' .t('Login'). '</a></li><li class="ureg"><a href="' .url('user/register'). '" rel="nofollow">' .t('Register'). '</a></li></ul>';
+      print '<div class="element-invisible">'.t('Login links').'</div><ul class="links inline"><li class="ulog first"><a href="' .url('user'). '" rel="nofollow">' .t('Login'). '</a></li><li class="ureg"><a href="' .url('user/register'). '" rel="nofollow">' .t('Register'). '</a></li></ul>';
     }
   }
 }

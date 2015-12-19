@@ -83,6 +83,9 @@ function panopoly_core_update_dependencies() {
   $deps['panopoly_core'][7002] = array(
     'pathauto' => 7006,
   );
+  $deps['module_filter'][7200] = array(
+    'panopoly_core' => 7105,
+  );
   return $deps;
 }
 
@@ -209,4 +212,24 @@ function panopoly_core_update_7103() {
         ->execute();
     }
   }
+}
+
+/**
+ * Ensure that jquery_update in enabled and configured.
+ */
+function panopoly_core_update_7104() {
+  module_enable(array('jquery_update'));
+
+  // If the user never configured the jquery version, then we set it to our
+  // default of 1.7.
+  if (variable_get('jquery_update_jquery_version', 'not set') === 'not set') {
+    variable_set('jquery_update_jquery_version', '1.7');
+  }
+}
+
+/**
+ * Rebuild the code registry for views_autocomplete_filters 1.2.
+ */
+function panopoly_core_update_7105() {
+  registry_rebuild();
 }
