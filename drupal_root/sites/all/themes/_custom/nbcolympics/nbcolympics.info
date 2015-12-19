@@ -1,0 +1,33 @@
+name = NBC Olympics Theme
+description = Custom theme for Rio Olympics 2016 nbcolympics.com
+version = 1.0
+
+core = 7.x
+engine = phptemplate
+
+; Regions
+regions[header] = Header
+regions[lead_ad_unit] = Lead Ad Unit
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[footer] = Footer
+; Required hidden regions
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+; Hiding regions from block manager
+;regions[indicators] = Indicators
+;regions_hidden[] = indicators
+
+; Styles
+stylesheets[all][] = css/admin.css
+stylesheets[all][] = css/main.css
+
+; Javascript
+
+; Plugins
+
+; Features
+; https://drupal.org/node/171205#features
+
+; Settings

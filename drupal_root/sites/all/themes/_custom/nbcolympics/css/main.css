@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Main that aggregates for now styles for NBC Olympics theme
+ * so I do not have to include them and remove in .info file
+ */
+
+@import url('base.css');
+@import url('normalize.css');
+@import url('layout.css');
+@import url('fonts.css');
+@import url('typography.css');
+@import url('nbcolympics.css');

@@ -1,0 +1,78 @@
+/**
+ * @file
+ * NBC Olympics specific styles for NBC Olympics theme
+ */
+
+/**
+ * $MARKS
+ */
+mark,
+.marker {
+  padding: 0.1em 0.5em;
+  background: #666;
+  color: #fff;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+/* Layout styles */
+/* Makes border-box properties */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1259px) {
+  .container {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1260px) {
+  .container {
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* Link block styles */
+.link_type-block {
+  display: block;
+}
+.link_type-play {
+  position: relative;
+}

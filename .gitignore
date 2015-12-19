@@ -8,3 +8,4 @@ sites/*/private
 # Ignore OS X, editor
 .DS_Store
 *.sublime-*
+.idea

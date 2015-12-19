@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Base styles for NBC Olympics theme
+ */
+
+/* Changing Susy default global settings */
+img, media {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/* Only mobile helper styles */
+@media (min-width: 320px) and (max-width: 767px) {
+  .mobile_hidden {
+    display: none;
+  }
+
+  .mobile_visible {
+    display: block;
+  }
+}

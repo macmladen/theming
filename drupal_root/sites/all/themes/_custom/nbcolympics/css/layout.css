@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Layout styles for NBC Olympics theme
+ */
+
+body {
+  background: #fff;
+}
+
+/* Mobile first - fluid */
+.node {
+  width: 100%;
+}
+/* Tablet - fixed */
+@media (min-width: 640px) {
+  .node {
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+/* Desktop - fixed */
+@media (min-width: 1366px) {
+  .node {
+    width: 1366px;
+  }
+}
