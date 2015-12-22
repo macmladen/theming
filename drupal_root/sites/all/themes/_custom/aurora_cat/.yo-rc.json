@@ -4,7 +4,7 @@
     "projectSlug": "aurora_cat",
     "baseTheme": "aurora",
     "baseThemeSettings": {
-      "auroraType": "polaris"
+      "auroraType": "aurora"
     },
     "sassDir": "sass",
     "cssDir": "css",

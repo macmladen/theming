@@ -1,7 +1,7 @@
 ////////////////////////
 // Style File
 //
-// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layouts, modules, and states partials.
+// This file gets turned into style.css. This file should really hold nothing except for imports of your base, style guide, layout, and design partials.
 ////////////////////////
 
 ////////////////////////
@@ -15,16 +15,11 @@
 @import 'partials/styleguide/style-guide';
 
 ////////////////////////
-// Import Layouts
+// Import Layout
 ////////////////////////
-@import 'partials/layouts/layouts';
+@import 'partials/layout/layout';
 
 ////////////////////////
-// Import Modules
+// Import Design
 ////////////////////////
-@import 'partials/modules/modules';
-
-////////////////////////
-// Import States
-////////////////////////
-@import 'partials/states/states';
+@import 'partials/design/design';
